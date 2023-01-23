@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Nnx8fGVufDB8fHx8&w=1000&q=80");
+  background-size: cover;
+  transition: filter 0.7s;
+}
+.container h1 {
+  color: white;
+  font-weight: 900;
+  font-family: sans-serif;
+  font-size: 60px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.active.container {
+  filter: blur(5px) brightness(0.7);
+}
+.btn {
+  padding: 10px 20px;
+  width: 200px;
+  cursor: pointer;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: whitesmoke;
+}
+.btn:hover {
+  filter: brightness(0.8);
+}
+
+/* pop up section */
+.popup_container {
+  position: fixed;
+  left: 50%;
+  width: 400px;
+  height: 200px;
+  top: 30%;
+  transform: translate(-50%);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-image: url("https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHdvcmt8ZW58MHx8MHx8&w=1000&q=80");
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  transition: all 0.7s;
+}
+h4 {
+  font-size: 30px;
+  margin: 10px 0px;
+  font-family: serif;
+  color: blueviolet;
+}
+label {
+  color: blueviolet;
+  font-family: serif;
+}
+.popupbtn {
+  background-color: orangered;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px solid;
+}
+input {
+  border: 2px solid;
+  margin: 10px 0;
+  font-size: 20px;
+  text-align: center;
+}
+.input::placeholder {
+  color: lightgray;
+}
+
+.close-icon {
+  position: absolute;
+  right: 2rem;
+  top: 10%;
+  cursor: pointer;
+  color: blue;
+}
+.close-icon:hover {
+  color:  red;
+}
+.popup_container.active{
+  visibility: hidden;
+  opacity: 0;
+  top: 10%;
+}
+
+/* media querries */
+
+@media(max-width: 450px){
+  .popup_container{
+    width: 250px;
+  }
+}
